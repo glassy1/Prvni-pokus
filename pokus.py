@@ -9,4 +9,4 @@ def printXY(progress):
     sys.stdout.flush()
 
 for i in range(1000):
-    printXY(i)
+    printXY(i) # vytiskni dane cislo 
