@@ -8,10 +8,21 @@ def printXY(progress):
         a=a*5
     sys.stdout.write("Download progress: %d%%\r" %(progress)) # to umoznuje zapis do jedne radky. Nejak je mozno nastavit i sloupce. Nuntou prozkoumat. Mozno bude lepsi pouzit Tkinter
     sys.stdout.flush()
-print
-print "==================================="
-print "                Start              "
-print "==================================="
+
+def print_start():
+    print
+    print "==================================="
+    print "                Start              "
+    print "==================================="
+
+def print_end():
+    print "==================================="
+    print "                Konec              "
+    print "==================================="
+    print
+
+print_start()# komentar pomoci multi line edit
+
 for i in range(100):
     printXY(i) # vytiskni dane cislo
 
@@ -23,6 +34,4 @@ while key!="q": # cekej na stisk klavesy
     key = getch()
     print(key)
 
-print "==================================="
-print "                Konec              "
-print "==================================="
+print_end()# komentar pomoci multi line edit
