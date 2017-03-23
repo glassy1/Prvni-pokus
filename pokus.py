@@ -10,28 +10,41 @@ def printXY(progress):
     sys.stdout.flush()
 
 def print_start():
+    """ 
+    Tato funkce vytiskne uvodni hlavicku skriptu.
+
+    """
     print
-    print "==================================="
+    print "***********************************"
     print "                Start              "
-    print "==================================="
+    print "-----------------------------------"
 
 def print_end():
-    print "==================================="
+    print 
     print "                Konec              "
-    print "==================================="
+    print "***********************************"
     print
 
-print_start()# komentar pomoci multi line edit
 
-for i in range(100):
-    printXY(i) # vytiskni dane cislo
+if __name__ == '__main__':
+    print_start() 
+    print "Umisteni skriptu: " + sys.path[0]
+    #print (print_start.__doc__) # tohle umi vytisknout napovedu/dokumentaci funkce
+    
+    #    printXY(100) # vytiskni dane cislo na pozici
+    for radek in range(10):
+        for sloupec in range(radek):
+            sys.stdout.write('*')
+            sys.stdout.flush()
+            
+        print
+    print
+     # cekej na stisk klavesy, q = quit
+ #   key="" # zde se uklada stisknuta klavesa
+ #   while key!="q": 
+ #       print "Stiskni 'q'  pro ukonceni programu."
+ #       key = getch()
+ #       print(key)
 
-print
+    print_end()# komentar pomoci multi line edit
 
-key="" # zde se uklada stisknuta klavesa
-while key!="q": # cekej na stisk klavesy
-    print "Stiskni 'q'  pro ukonceni programu."
-    key = getch()
-    print(key)
-
-print_end()# komentar pomoci multi line edit
