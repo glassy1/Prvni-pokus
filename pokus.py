@@ -10,7 +10,7 @@ def printXY(progress):
     sys.stdout.flush()
 
 def print_start():
-    """ 
+    """
     Tato funkce vytiskne uvodni hlavicku skriptu.
 
     """
@@ -20,31 +20,48 @@ def print_start():
     print "-----------------------------------"
 
 def print_end():
-    print 
+    print
     print "                Konec              "
     print "***********************************"
     print
 
-
-if __name__ == '__main__':
-    print_start() 
-    print "Umisteni skriptu: " + sys.path[0]
-    #print (print_start.__doc__) # tohle umi vytisknout napovedu/dokumentaci funkce
-    
-    #    printXY(100) # vytiskni dane cislo na pozici
-    for radek in range(10):
+def tiskni_hvezdicky(pocet):
+    for radek in range(pocet+1):
         for sloupec in range(radek):
             sys.stdout.write('*')
             sys.stdout.flush()
-            
         print
+
+def pascal_trojuh(pocet):
+    pole=[0 for i in range (30)] # priprav si prazdne pole
+    pole[0]=1
+    pole[1]=3
+    pole[2]=3
+    pole[3]=1
+    pole1 = [0 for i in range (30)]
+    print pole
+    for i in range(30):
+        if i==0:
+            pole1[0]=1
+        if i>0 and i<4:
+                pole1[i]=pole[i-1]+pole[i]
+    print pole1
+
+
+if __name__ == '__main__':
+    print_start()
+    print "Umisteni skriptu: " + sys.path[0] #print (print_start.__doc__) # tohle umi vytisknout napovedu/dokumentaci funkce
+
+    pascal_trojuh(5)
+    #    printXY(100) # vytiskni dane cislo na pozici
+    #tiskni_hvezdicky(10)
+
     print
      # cekej na stisk klavesy, q = quit
  #   key="" # zde se uklada stisknuta klavesa
- #   while key!="q": 
+ #   while key!="q":
  #       print "Stiskni 'q'  pro ukonceni programu."
  #       key = getch()
  #       print(key)
 
     print_end()# komentar pomoci multi line edit
-
