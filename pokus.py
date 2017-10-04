@@ -33,6 +33,9 @@ def tiskni_hvezdicky(pocet):
         print
 
 def pascal_trojuh(pocet):
+    """
+    Vypocet Fiboniace
+    """
     pole=[0 for i in range (30)] # priprav si prazdne pole
     pole[0]=1
     pole[1]=0
