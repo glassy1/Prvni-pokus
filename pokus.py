@@ -27,7 +27,7 @@ def print_end():
 
 def tiskni_hvezdicky(pocet):
     """
-    Tiskne hvezdicky trojuhelniku.
+    Tiskne hvezdicky trojuhelniku. A pridame dalsi komentar.
     """
     for radek in range(pocet+1):
         for sloupec in range(radek):
