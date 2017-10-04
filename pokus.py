@@ -26,6 +26,9 @@ def print_end():
     print
 
 def tiskni_hvezdicky(pocet):
+    """
+    Tiskne hvezdicky trojuhelniku.
+    """
     for radek in range(pocet+1):
         for sloupec in range(radek):
             sys.stdout.write('*')
