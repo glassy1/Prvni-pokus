@@ -37,7 +37,7 @@ def pascal_trojuh(pocet):
     Vypocet Fiboniace
     """
     pole=[0 for i in range (pocet)] # priprav si prazdne pole
-    pole[0]=1
+    pole[0]=0
     pole[1]=0
     pole[2]=0
     pole[3]=0
