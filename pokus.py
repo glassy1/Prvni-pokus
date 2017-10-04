@@ -35,23 +35,24 @@ def tiskni_hvezdicky(pocet):
 def pascal_trojuh(pocet):
     pole=[0 for i in range (30)] # priprav si prazdne pole
     pole[0]=1
-    pole[1]=3
-    pole[2]=3
-    pole[3]=1
+    pole[1]=0
+    pole[2]=0
+    pole[3]=0
     pole1 = [0 for i in range (30)]
-    print pole
     for i in range(30):
         if i==0:
-            pole1[0]=1
+           pole1[0]=1
         if i>0 and i<4:
-                pole1[i]=pole[i-1]+pole[i]
+            pole1[i]=pole[i-1]+pole[i]
     print pole1
+
+
 
 
 if __name__ == '__main__':
     print_start()
     print "Umisteni skriptu: " + sys.path[0] #print (print_start.__doc__) # tohle umi vytisknout napovedu/dokumentaci funkce
-
+    
     pascal_trojuh(5)
     #    printXY(100) # vytiskni dane cislo na pozici
     #tiskni_hvezdicky(10)
