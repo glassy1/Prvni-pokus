@@ -41,8 +41,8 @@ def pascal_trojuh(pocet):
     pole[1]=0
     pole[2]=0
     pole[3]=0
-    pole1 = [0 for i in range (30)]
-    for i in range(30):
+    pole1 = [0 for i in range (pocet)]
+    for i in range(pocet)):
         if i==0:
            pole1[0]=1
         if i>0 and i<4:
